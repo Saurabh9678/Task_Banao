@@ -16,11 +16,13 @@ app.use(function (req, res, next) {
 });
 
 const userRoutes = require("./Routes/userRoutes");
-
+const postRoutes = require("./Routes/postRoutes");
+const commentRoutes = require("./Routes/commentRoutes");
 
 //Routes
 app.use("/api/v1/user", userRoutes);
-
+app.use("/api/v1/post", postRoutes);
+app.use("/api/v1/comment", commentRoutes);
 
 // MiddleWare for Error
 
